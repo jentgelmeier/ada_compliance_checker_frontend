@@ -76,22 +76,24 @@ function App() {
 
   return (
     <>
-      <header className="fixed-top">
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-          <div className="container-fluid">
-            <span className="fs-3">ADA Compliance Checker</span>
+      <header style={{ width: "100vw", position: "absolute", left: "0" }}>
+        <nav className="navbar navbar-expand-lg bg-primary">
+          <div className="container-fluid d-flex justify-content-center">
+            <span className="fs-3 text-white" style={{ fontFamily: "Poppins" }}>
+              ADA Compliance Checker
+            </span>
           </div>
         </nav>
       </header>
-      <div className="container mt-5">
+      <div className="container" style={{ marginTop: "4rem" }}>
         <div className="row">
           <div className="col-md-6 col-s-12 p-2">
             <div className="row">
               <div className="col d-flex">
                 <span className={`fs-5 ${inputText}`}>Input HTML</span>
-                <div class="form-check form-switch d-flex align-items-center ps-5">
+                <div className="form-check form-switch d-flex align-items-center ps-5">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     role="switch"
                     value={urlToggle}
@@ -139,8 +141,8 @@ function App() {
         </div>
       </div>
 
-      <footer>
-        <div className="container mt-3">
+      <footer className="pt-3">
+        <div className="container">
           <div className="row">
             <div className="col-xs-12 text-center">
               <div>© 2025 Jason Entgelmeier</div>
@@ -192,11 +194,7 @@ function IssueBlock({ issues, error, submitted }) {
       <IssueCard issue={issue} index={index} />
     ));
   } else if (issues.message) {
-    return (
-      <div className="alert alert-danger">
-        {issues.message}
-      </div>
-    );
+    return <div className="alert alert-danger">{issues.message}</div>;
   } else if (submitted) {
     return (
       <div className="alert alert-success">
