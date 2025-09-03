@@ -83,7 +83,7 @@ function App() {
           </div>
         </nav>
       </header>
-      <div className="container content mt-5">
+      <div className="container mt-5">
         <div className="row">
           <div className="col-md-6 col-s-12 p-2">
             <div className="row">
@@ -126,7 +126,7 @@ function App() {
               Submit
             </button>
           </div>
-          <div className="col-md-6 col-s-12 p-2" style={{ minHeight: "690px" }}>
+          <div className="col-md-6 col-s-12 p-2" id="right-col">
             <span className="fs-5">Identified Issues</span>
             <div
               id="issues"

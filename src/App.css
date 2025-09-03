@@ -4,6 +4,19 @@
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  #right-col {
+    min-height: 690px
+  }
+}
+
+@media (max-width: 767px) {
+    body {
+      display: flex;
+      align-items: flex-start;
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
